@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -9,7 +10,7 @@ import { Progress } from '@/components/ui/progress';
 const Index = () => {
   const [userPoints, setUserPoints] = useState(850);
   const [nextRewardPoints] = useState(1000);
-  const [userName] = useState('Cliente Aguirra');
+  const [userName] = useState('João Silva');
 
   const coupons = [
     { id: 1, title: '10% OFF', description: 'Em qualquer esfiha', expiry: '30/12/2024', code: 'ESFIHA10' },
@@ -144,7 +145,7 @@ const Index = () => {
                     <div className="flex items-center justify-between">
                       <div className="flex items-center gap-4">
                         <div className="w-16 h-16 bg-secondary-500 rounded-full flex items-center justify-center">
-                          <Ticket className="w-8 h-8 text-black" />
+                          <Ticket className="w-8 h-8 text-white" />
                         </div>
                         <div>
                           <h3 className="font-bold text-lg text-gray-900">{coupon.title}</h3>
@@ -156,7 +157,7 @@ const Index = () => {
                         <Badge variant="outline" className="mb-2 border-secondary-500 text-secondary-600">
                           {coupon.code}
                         </Badge>
-                        <Button className="block bg-secondary hover:bg-secondary-600 text-black">
+                        <Button className="block bg-secondary hover:bg-secondary-600">
                           Usar Cupom
                         </Button>
                       </div>
